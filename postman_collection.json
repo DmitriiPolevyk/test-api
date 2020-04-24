@@ -1,0 +1,224 @@
+{
+	"info": {
+		"_postman_id": "062f6d1f-7903-40c3-978d-7c40beee72fd",
+		"name": "Ultra.io",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CREATE",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"manufacturer\": {\r\n      \"name\": \"manufacturer1\",\r\n      \"phone\": \"380991234567\",\r\n      \"siret\": \"111122223333\"\r\n    },\r\n    \"price\": 1000,\r\n    \"firstRegistrationDate\": \"2019-04-20\",\r\n    \"owners\": [\r\n    \t{\r\n\t\t    \"name\": \"test1\",\r\n\t\t    \"purchaseDate\": \"2018-10-20\"\r\n\t\t },\r\n\t\t \t{\r\n\t\t    \"name\": \"test2\",\r\n\t\t    \"purchaseDate\": \"2020-04-23\"\r\n\t\t }\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "http://0.0.0.0:3000/car",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "3000",
+					"path": [
+						"car"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FIND all",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"disabled": true
+					},
+					{
+						"key": "offset",
+						"value": "1",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://0.0.0.0:3000/car",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "3000",
+					"path": [
+						"car"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FIND by id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"url": {
+					"raw": "http://0.0.0.0:3000/car/find/5ea2a196b6837a52e39fea3b",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "3000",
+					"path": [
+						"car",
+						"find",
+						"5ea2a196b6837a52e39fea3b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"manufacturer\": {\r\n      \"name\": \"manufacturer123\",\r\n      \"phone\": \"380671234567\",\r\n      \"siret\": \"111122223333\"\r\n    },\r\n    \"price\": 1001,\r\n    \"firstRegistrationDate\": \"2020-04-23\",    \r\n    \"owners\": [\r\n    \t{\r\n\t\t    \"name\": \"test123\",\r\n\t\t    \"purchaseDate\": \"2020-04-22\"\r\n\t\t },\r\n\t\t \t{\r\n\t\t    \"name\": \"test245\",\r\n\t\t    \"purchaseDate\": \"2020-04-23\"\r\n\t\t }\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "http://0.0.0.0:3000/car/5ea2a196b6837a52e39fea3b",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "3000",
+					"path": [
+						"car",
+						"5ea2a196b6837a52e39fea3b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://0.0.0.0:3000/car/5ea2a196b6837a52e39fea3b",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "3000",
+					"path": [
+						"car",
+						"5ea2a196b6837a52e39fea3b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FETCH manufacturer by car id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"url": {
+					"raw": "http://0.0.0.0:3000/car/manufacturer/5ea2a196b6837a52e39fea3b",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "3000",
+					"path": [
+						"car",
+						"manufacturer",
+						"5ea2a196b6837a52e39fea3b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SYNC",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"url": {
+					"raw": "http://0.0.0.0:3000/car/sync",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "3000",
+					"path": [
+						"car",
+						"sync"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

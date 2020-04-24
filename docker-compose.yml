@@ -1,0 +1,16 @@
+version: "3"
+services:
+  mongo:
+    image: mongo
+    container_name: mongo_container
+    ports:
+      - "27017:27017"
+  apo:  
+    build: .
+    container_name: app_container
+    volumes:
+      - ".:/test-api"
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo
